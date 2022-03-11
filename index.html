@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+          <h1 class="btn btn-success heading">GESTURE WEB APP
+            <br>
+            <span>&#128076;</span>
+            <span>&#128080;</span>
+            <span>&#129304;</span>
+            <span>&#128077;</span>
+            <span>&#128073;</span>
+            <span>&#128075;</span>
+          </h1>
+      <br><br>
+
+      <p style="font-size: 22px;">Take a selfie of a gesture to know about it's meaning
+      	<br>
+        <h3 style="color: white">On the following gestures the model is trained</h3>
+        <span>
+          <span>&#128076;</span>
+        <hr>
+        <span>&#128077;</span>
+        <hr>
+        <span>&#9996;</span>
+        <br>
+      </span>
+      </p>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <label>Webcam View-</label>
+        <br>
+        <div id="Webcam1"></div>
+        <br>
+        <button class="btn btn-warning" onclick="take_snapshot()">Take Snapshot</button>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <label>Prediction 1</label>
+       <p id="result_name1" class="name"></p>
+       <p id="result_emoji1" class="name"></p>
+       <label>Prediction 2</label>
+       <p id="result_name2" class="name"></p>
+       <p id="result_emoji2" class="name"></p>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <br>
+        <div id="result"></div>  
+        <br>      
+        <button class="btn btn-danger" onclick="prediction()">Predict Emotion</button>
+        <br><br>
+
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
